@@ -1,6 +1,22 @@
 
 $(function () {
 
+// resize height
+
+const resizeOps = () => {
+  document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+};
+
+resizeOps();
+window.addEventListener("resize", resizeOps);
+
+
+
+
+
+
+
+
   // onboarding welcomescreen slider
   var swiper = new Swiper(".onboarding__slider", {
     pagination: {
@@ -31,10 +47,14 @@ $(function () {
 
 
   // error button 
-  
+
   $('.error-close').on('click', function () {
     $('#error-message').hide();
   });
+
+
+
+
 
 
 
